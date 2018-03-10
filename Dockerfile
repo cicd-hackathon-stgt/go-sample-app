@@ -4,7 +4,7 @@ ADD . /app
 
 WORKDIR /app
 
-RUN if go test -v; then echo "Test execution succesful"; else exit 1; fi \
+RUN if go test -v; then echo "Test execution successful"; else exit 1; fi \
  &&  CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-extldflags "-static"' -o app .
 
 FROM scratch
