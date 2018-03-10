@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func handler(rw http.ResponseWriter, req *http.Request) {
+	fmt.Fprintln(rw, "Hello Go!")
+}
 
 func main() {
-	fmt.Printf("Hello Go!\n")
+	http.HandleFunc("/", handler)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
