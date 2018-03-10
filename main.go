@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/ci-cd-hackathon/go-sample-app/greeting"
 )
 
 func handler(rw http.ResponseWriter, req *http.Request) {
-	fmt.Fprintln(rw, "Hello Go!")
+	fmt.Fprintln(rw, greeting.GetGreeting())
 }
 
 func main() {
