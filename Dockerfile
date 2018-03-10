@@ -1,7 +1,5 @@
 FROM golang:1.10-alpine AS builder
 
-RUN apk add --no-cache ruby ruby-dev
-
 ADD . /app
 
 WORKDIR /app
