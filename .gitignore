@@ -1,0 +1,5 @@
+# VSCode stuff
+.vscode/
+
+# Ignore generated debug file
+debug
